@@ -7,10 +7,10 @@ $(document).ready(function() {
   $("#currentDay").text(today.format('dddd, MMMM Do YYYY h:mm'));
 
   // Event if the save button beside the textarea is clicked
-  $(".savebtn").click(function(event) {
+  $(".saveBtn").click(function(event) {
     event.preventDefault();
-    var saveText = $(this).sibling(".description").val();
-    var hourIndex = $(this).parent("id");
+    var saveText = $(this).siblings(".description").val();
+    var hourIndex = $(this).parent().attr("id");
 
   // Set the textarea data to local storage
     localStorage.setItem(hourIndex, saveText);
