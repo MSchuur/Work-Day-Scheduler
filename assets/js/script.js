@@ -1,6 +1,21 @@
+
+// Wait for code to render all elements in html
 $(document).ready(function() {
 
+  // Set day and time in header
+  var today = dayjs();
+  $("#currentDay").text(today.format('dddd, MMMM Do YYYY h:mm'));
 
+  // Event if the save button beside the textarea is clicked
+  $(".savebtn").click(function(event) {
+    event.preventDefault();
+    var saveText = $(this).sibling(".description").val();
+    var hourIndex = $(this).parent("id");
+
+  // Set the textarea data to local storage
+    localStorage.setItem(hourIndex, saveText);
+  })
+  
 
 
 
