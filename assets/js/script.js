@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   // Set day and time in header
   var today = dayjs();
-  $("#currentDay").text(today.format('dddd, MMMM Do YYYY h:mm'));
+  $("#currentDay").text(today.format('dddd, MMMM Do YYYY h:mm A'));
 
   // Event if the save button beside the textarea is clicked.
   $(".saveBtn").click(function(event) {
